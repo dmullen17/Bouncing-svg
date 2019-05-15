@@ -1,0 +1,33 @@
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  border: 2px solid blue;
+}
+
+.golden-snitch {
+  position: absolute;
+  fill: gold;
+  height: 30px;
+  transitition: all 1s ease;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes heights {
+  0% {
+    top: 0vh;
+  }
+  50% {
+    top: 100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
