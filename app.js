@@ -1,6 +1,5 @@
-const toggleColor = function() {
-  const fill = this.style.fill == 'gold' ? 'blue' : 'gold';
-  this.style.fill = fill;
+const toggleSpin = function() {
+  this.classList.toggle('spinning');
 }
 
 const updatePosition = function(step=1) {
@@ -12,5 +11,5 @@ const goldenSnitch = document.querySelector('.golden-snitch');
 
 // Add event listeners
 goldenSnitch.addEventListener('click', updatePosition);
-goldenSnitch.addEventListener('click', toggleColor);
+goldenSnitch.addEventListener('click', toggleSpin);
 

@@ -1,14 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #154277 0%,#576e71 30%,#e1c45e 70%,#b26339 100%);
+}
+
 .container {
   min-height: 100vh;
   min-width: 100vw;
-  border: 2px solid blue;
 }
 
 .golden-snitch {
   position: absolute;
-  fill: gold;
   height: 30px;
-  transitition: all 1s ease;
+  animation: horizontal 12s infinite linear, vertical 20s infinite ease; 
+}
+
+.quaffle {
+  height: 40px;
+}
+
+.spinning {
+  animation: horizontal 12s infinite linear, vertical 20s infinite ease, rotation 3s infinite linear;
 }
 
 @keyframes rotation {
@@ -20,7 +32,7 @@
   }
 }
 
-@keyframes heights {
+@keyframes vertical {
   0% {
     top: 0vh;
   }
@@ -29,5 +41,17 @@
   }
   100% {
     top: 0vh;
+  }
+}
+
+@keyframes horizontal {
+  0% {
+    left: 0vw;
+  }
+  50% {
+    left: 100vw;
+  }
+  100% {
+    left: 0vw;
   }
 }
